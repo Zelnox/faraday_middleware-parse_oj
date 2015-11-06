@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require File.expand_path('../lib/faraday_middleware/parse_oj', __FILE__)
 
 Gem::Specification.new do |gem|
@@ -16,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.version       = FaradayMiddleware::ParseOj::VERSION
   
   gem.add_runtime_dependency 'faraday',            '~> 0.9.0'
-  gem.add_runtime_dependency 'faraday_middleware', '~> 0.9.1'
-  gem.add_runtime_dependency 'oj',                 '~> 2.0'
+  gem.add_runtime_dependency 'faraday_middleware', '~> 0.10.0'
+  gem.add_runtime_dependency 'oj',                 '> 2.0.0'
   
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
