@@ -1,4 +1,4 @@
-require 'faraday_middleware/parse_oj'
+require 'faraday_middleware/response/parse_oj'
 
 describe FaradayMiddleware::ParseOj do
   before(:each) do
